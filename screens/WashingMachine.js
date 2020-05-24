@@ -26,10 +26,7 @@ export function WashingMachine(props) {
       <View style={styles.container}>
         <View style={styles.circle} />
         <View style={{ marginHorizontal: 32, marginTop: 30 }}>
-          <Text style={styles.header}>
-            {" "}
-            Available Washing Machines In Bakul
-          </Text>
+          <Text style={styles.header}>Available Washing Machines In Bakul</Text>
           <Text style={styles.header}>2</Text>
           <TouchableOpacity style={styles.continue}>
             <Ionicons name="md-add-circle-outline" size={80} color="#9075E3" />

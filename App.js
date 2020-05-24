@@ -17,8 +17,22 @@ export default function App() {
       <Drawer.Navigator initialRouteName="Home">
         <Drawer.Screen name="Logout" component={LoginScreen} />
         <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="Washing Machines" component={WashingMachine} />
+        <Drawer.Screen
+          name="Bakul Washing Machines"
+          component={WashingMachine}
+        />
+        <Drawer.Screen
+          name="Parijaat Washing Machines"
+          component={WashingMachine}
+        />
+        <Drawer.Screen name="Warehouse Pool" component={WashingMachine} />
+        <Drawer.Screen name="Warehouse TT" component={WashingMachine} />
+        <Drawer.Screen name="NBH TT" component={WashingMachine} />
+        <Drawer.Screen name="Badminton Courts" component={WashingMachine} />
+        <Drawer.Screen name="Tennis Courts" component={WashingMachine} />
+        <Drawer.Screen name="JC" component={DLFScreen} />
         <Drawer.Screen name="DLF" component={DLFScreen} />
+        <Drawer.Screen name="Ratnadeep" component={DLFScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
