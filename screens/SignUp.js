@@ -15,35 +15,37 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import { NavigationContainer } from "@react-navigation/native";
 import { Header, Right, Left, Icon } from "native-base";
 
-export function WashingMachine(props) {
+export function LoginScreen(props) {
+  const [name, setname] = useState("");
+  const [number, setnumber] = useState("");
+
   return (
-    <View style={{ flex: 1 }}>
-      <Header>
-        <Left>
-          <Icon name="menu" onPress={() => props.navigation.openDrawer()} />
-        </Left>
-      </Header>
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
       <View style={styles.container}>
         <View style={styles.circle} />
-        <View style={{ marginHorizontal: 32, marginTop: 30 }}>
-          <Text style={styles.header}>
-            {" "}
-            Available Washing Machines In Bakul
-          </Text>
-          <Text style={styles.header}>2</Text>
+        <View style={{ marginHorizontal: 32 }}>
+          <Text style={styles.header}>Username</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Username"
+            onChangeText={name => {
+              setname(name);
+            }}
+          />
+          <Text style={styles.header}>Phone Number</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Phone Number"
+            onChangeText={name => {
+              setnumber(name);
+            }}
+          />
           <TouchableOpacity style={styles.continue}>
-            <Ionicons name="md-add-circle-outline" size={80} color="#9075E3" />
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.continue}>
-            <Ionicons
-              name="md-remove-circle-outline"
-              size={80}
-              color="#9075E3"
-            />
+            <Ionicons name="md-arrow-round-forward" size={24} color="#FFF" />
           </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </TouchableWithoutFeedback>
   );
 }
 
@@ -78,10 +80,10 @@ const styles = StyleSheet.create({
     fontWeight: "600"
   },
   continue: {
-    marginTop: 45,
     width: 70,
     height: 70,
     borderRadius: 70 / 2,
+    backgroundColor: "#9075E3",
     alignItems: "center",
     justifyContent: "center"
   }

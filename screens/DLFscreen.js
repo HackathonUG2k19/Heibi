@@ -17,13 +17,27 @@ import { Header, Right, Left, Icon } from "native-base";
 
 export function DLFScreen(props) {
   return (
-    <View style={styles.container}>
-      <View style={styles.circle} />
-      <View style={{ marginHorizontal: 32, marginTop: 30 }}>
-        <Text style={styles.header}> People who want food form DLF</Text>
-        <TouchableOpacity style={styles.continue}>
-          <Ionicons name="md-add-circle-outline" size={80} color="#9075E3" />
-        </TouchableOpacity>
+    <View style={{ flex: 1 }}>
+      <Header>
+        <Left>
+          <Icon name="menu" onPress={() => props.navigation.openDrawer()} />
+        </Left>
+      </Header>
+      <View style={styles.container}>
+        <View style={styles.circle} />
+        <View style={{ marginHorizontal: 32, marginTop: 30 }}>
+          <Text style={styles.header}> People who want food form DLF</Text>
+          <View style={{ marginTop: 10 }}>
+            <Text style={{ fontSize: 20 }}>Tushar : 9618354598</Text>
+            <Text style={{ fontSize: 20 }}>Ainesh : 6785674564</Text>
+            <Text style={{ fontSize: 20 }}>Pahul : 0988766543</Text>
+            <Text style={{ fontSize: 20 }}>Kshitijaa : 6785674563</Text>
+            <Text style={{ fontSize: 20 }}>Mallika : 1234567891</Text>
+          </View>
+          <TouchableOpacity style={styles.continue}>
+            <Ionicons name="md-add-circle-outline" size={80} color="#9075E3" />
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
@@ -60,7 +74,7 @@ const styles = StyleSheet.create({
     fontWeight: "600"
   },
   continue: {
-    marginTop: 300,
+    marginTop: 230,
     width: 70,
     height: 70,
     borderRadius: 70 / 2,
